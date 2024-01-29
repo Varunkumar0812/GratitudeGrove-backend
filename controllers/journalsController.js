@@ -1,8 +1,9 @@
+const Entry = require("../models/entryModel");
 const Journal = require("../models/journalModel");
 
 exports.getAllJournals = async (req, res, next) => {
   try {
-    const journals = await Journal.find();
+    const journals = await Journal.find({ user: req.body.user._id });
 
     res.status(200).json({
       status: "success",
@@ -58,6 +59,7 @@ exports.updateJournal = async (req, res, next) => {
 exports.createJournal = async (req, res, next) => {
   try {
     req.body.date = Date.now();
+    req.body.entries = await Entry.find();
     const jounral = await Journal.create(req.body);
 
     res.status(200).json({
