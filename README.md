@@ -4,7 +4,7 @@
 
 The backend for Gratitude Grove is built using Node.js, Express, and MongoDB, with Mongoose as the ORM (Object-Relational Mapping) tool. This backend manages user authentication, journal entries, goals, and user data. It provides CRUD operations for managing journals, goals, and user data, and uses JWT (JSON Web Token) for secure authentication and authorization.
 
-- [Gratitude Grove - Frontend](https://github.com/username/gratitude-grove-frontend)
+- [Gratitude Grove - Frontend](https://github.com/Varunkumar0812/GratitudeGrove-frontend)
 
 ## Models
 
